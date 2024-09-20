@@ -3,22 +3,22 @@ import mongoose from "mongoose";
 const userSchema = new mongoose.Schema({
     email:{
         type:String,
-        requred:true,
+        required:true,
         unique:true
     },
-     name:{
+    name:{
         type:String,
-        requred:true,
+        required:true,
     },
     password:{
         type:String,
-        requred:true,
+        required:true,
     },
     isVerifed:{
         type:Boolean,
         default:false
     },
     verificationCode:String
-},{timestamps:true})
+}, {timestamps: true})
 
 export const userModel = mongoose.model('user', userSchema)
